@@ -4,10 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    main.cpp \
-    draw.cpp \
-    logic.cpp \
-    setup.cpp
+    main.cpp
 
 HEADERS += \
     playingcard.h \

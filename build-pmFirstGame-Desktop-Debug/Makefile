@@ -101,7 +101,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		../pmFirstGame/pmFirstGame.pro playingcard.h ../pmFirstGame/main.cpp
+		../pmFirstGame/pmFirstGame.pro playingcard.h \
+		deck.h \
+		player.h ../pmFirstGame/main.cpp
 QMAKE_TARGET  = pmFirstGame
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = pmFirstGame
@@ -277,7 +279,9 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../pmFirstGame/main.cpp ../pmFirstGame/playingcard.h
+main.o: ../pmFirstGame/main.cpp ../pmFirstGame/playingcard.h \
+		../pmFirstGame/player.h \
+		../pmFirstGame/deck.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../pmFirstGame/main.cpp
 
 ####### Install

@@ -1,31 +1,61 @@
 #include <iostream>
 #include <playingcard.h>
+#include <vector>
+#include <player.h>
+#include <deck.h>
+#include <clocale>
+#include <string>
 
 using namespace std;
 
+bool gameOver;
+string userName;
+
+
+bool Welcome();
+void Logic();
+void Draw();
+
 int main(){
+    setlocale(LC_CTYPE, "rus");
+    gameOver=false;
+    if(Welcome()==true){
 
-    playingCard card1,card2;
 
-    card1.valueSet(14);
-    card1.spellSet(0);
-    card1.suitSet(2);
 
-    if(card1.valueGet()>=4){
-        cout << "value troubl\n";
+
+
+
+
+
+
     }
     else{
-        cout << "must work\n";
-        if(card1.spellGet()>0)
-            cout<<"spells troubles\n";
-        else{
-            cout<<"no spell troubles\n";
-            if(card1.suitGet()!=0){
-                cout<<"OK\n";
-            }
-        }
+        system("clear");
+        cout<<"Жаль(\nПока, дорогой друг!";
     }
 
-
     return 0;
+}
+
+
+bool Welcome(){
+    cout<< "Привет...эммм...дорогой друг)\nКак тебя зовут?";
+    cout<<"\n\nМеня зовут (введи имя) ";
+    cin>> userName;
+    cout<<"Прекрасно "<< userName<<"\nДавай начнем?";
+    cout<<"\n\nХочешь прочитать правила? (Если нет, то игра закончится)(Y/N)";
+    char ruleWishAnswer;
+    cin>>ruleWishAnswer;
+
+    if((ruleWishAnswer=='Y')||(ruleWishAnswer=='y')){
+        system("clear");
+        cout<<"\nработает\n";
+        cout<<"ПравилаПравилаПравила";
+        return true;
+    }
+    else{
+        return false;
+    }
+
 }

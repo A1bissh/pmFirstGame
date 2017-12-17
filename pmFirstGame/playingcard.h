@@ -6,73 +6,50 @@ class playingCard{
 private:
 
     short int value, suit, spells;
-
-    enum valueEnum{
-        Ace=1,
-        two,
-        three,
-        four,
-        five,
-        six,
-        seven,
-        eigth,
-        nine,
-        ten,
-        jack,
-        queen,
-        king
-    };
-
-    enum spellsEnum{
-        emptyspell,
-        spiked,
-        bearded,
-        frozen,
-        armored,
-        poisoned,
-        fizled
-    };
-
-    enum suitEnum{
-        emptysuit,
-        red,
-        blue,
-        green,
-        violet,
-        coin,
-        tripleCoin
-    };
+    bool status;
 
 public:
+
+    void statusSet(bool stat){
+        status=stat;
+    }
 
     void valueSet(int newValue){
         value = newValue%13;
     }
 
+
     int valueGet(){
        return value;
     }
+
 
     void suitSet(int newSuit){
         suit=newSuit;
     }
 
+
     int suitGet(){
        return suit;
     }
 
+
     void spellSet(int newSpell){
-        spells= newSpell;
+        spells= newSpell%7;
     }
+
 
     void newSpellSet(int newSpell){
         if(newSpell> spells)
-            spells= newSpell;
+            spells= newSpell%7;
     }
+
 
     int spellGet(){
         return spells;
     }
+
+
 
 };
 
