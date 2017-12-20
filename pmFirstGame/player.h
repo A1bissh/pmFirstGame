@@ -8,11 +8,17 @@ using namespace std;
 
 class player{
 private:
-    short int healthStart, healtNow, spellToThrow;
+    short int healthStart, healtNow, spellToThrow, suitEnergy;
 
 public:
 
+    void attackByUser(){
 
+    }
+
+    void attackByEnemy(){
+
+    }
 
 };
 

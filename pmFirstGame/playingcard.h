@@ -5,6 +5,19 @@
 class playingCard{
 private:
 
+//    enum valueOfCard{
+//        ace=1,two,three, four, five,
+//        six, seven, eight, nine, ten,
+//        jack, queen, king
+//    } value;
+
+//    enum suitOfCard{
+//        emptySuit, attack, defence, aqility, willpower
+    //    } suit;
+
+//    enum spellOnCard{
+//        emptySpell, spiked, bearded, frozen, poisoned, fizled
+//    } spell;
     short int value, suit, spells;
     bool status;
 
@@ -25,7 +38,7 @@ public:
 
 
     void suitSet(int newSuit){
-        suit=newSuit;
+        suit=newSuit%5;
     }
 
 
@@ -49,8 +62,26 @@ public:
         return spells;
     }
 
+//Рандомизация//Рандомизация////Рандомизация//Рандомизация////Рандомизация//Рандомизация////Рандомизация//Рандомизация//
 
+
+    void randomize(){
+        suitSet(rand());
+        valueSet(rand());
+    }
+
+
+//Рандомизация//Рандомизация////Рандомизация//Рандомизация////Рандомизация//Рандомизация////Рандомизация//Рандомизация//
+//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//
+    void setup(){
+        suitSet(rand());
+        valueSet(rand());
+        spellSet(rand());
+        statusSet(true);
+    }
+//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//Пренастройка//
 
 };
+
 
 #endif // PLAYINGCARD_H

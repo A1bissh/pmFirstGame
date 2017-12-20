@@ -16,12 +16,33 @@ bool Welcome();
 void Logic();
 void Draw();
 
+
+//ГлавнаяФункция////ГлавнаяФункция////ГлавнаяФункция////ГлавнаяФункция////ГлавнаяФункция//
 int main(){
     setlocale(LC_CTYPE, "rus");
     gameOver=false;
+
+    vector< vector<playingCard> > playingDeck(5);
+    for(int i=0;i<5;i++){
+        playingDeck[i].resize(5);
+        for(int j=0;j<5; j++)
+            playingDeck[i][j].setup();
+    }
+
     if(Welcome()==true){
 
+        player user, compEnemy;
 
+        cout<<"\nВведи любой символ в знак того, что озакомлен с правилами:";
+        char ok;
+        cin>>ok;
+
+
+        while(!gameOver){
+
+
+
+        }
 
 
 
@@ -37,6 +58,8 @@ int main(){
 
     return 0;
 }
+//ГлавнаяФункция////ГлавнаяФункция////ГлавнаяФункция////ГлавнаяФункция////ГлавнаяФункция//
+
 
 
 bool Welcome(){
@@ -57,5 +80,4 @@ bool Welcome(){
     else{
         return false;
     }
-
 }
