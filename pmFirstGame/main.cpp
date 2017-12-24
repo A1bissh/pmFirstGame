@@ -33,6 +33,8 @@ int main(){
 
         player user, compEnemy;
 
+
+
         cout<<"\nВведи любой символ в знак того, что озакомлен с правилами:";
         char ok;
         cin>>ok;

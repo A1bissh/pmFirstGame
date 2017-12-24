@@ -1,24 +1,28 @@
 #ifndef PLAYER
 #define PLAYER
 
-#include <deck.h>
 #include <playingcard.h>
 
 using namespace std;
 
+
 class player{
+
+
+
 private:
-    short int healthStart, healtNow, spellToThrow, suitEnergy;
+
+    short int healtNow, armorNow;
+    short int suitsEnergy[4];
+
+    spell attack, makeAShield, checkYourNextCard, add1HP, add2Hp;
+
+
+
 
 public:
 
-    void attackByUser(){
 
-    }
-
-    void attackByEnemy(){
-
-    }
 
 };
 

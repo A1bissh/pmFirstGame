@@ -8,6 +8,7 @@ SOURCES += \
 
 HEADERS += \
     playingcard.h \
-    deck.h \
-    player.h
+    player.h \
+    enemy.h \
+    spellclass.h
 
