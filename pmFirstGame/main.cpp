@@ -2,14 +2,15 @@
 #include <playingcard.h>
 #include <vector>
 #include <player.h>
-#include <deck.h>
 #include <clocale>
 #include <string>
+#include <enemy.h>
 
 using namespace std;
 
 bool gameOver;
 string userName;
+vector< vector<playingCard> > playingDeck(5);
 
 
 bool Welcome();
@@ -22,7 +23,6 @@ int main(){
     setlocale(LC_CTYPE, "rus");
     gameOver=false;
 
-    vector< vector<playingCard> > playingDeck(5);
     for(int i=0;i<5;i++){
         playingDeck[i].resize(5);
         for(int j=0;j<5; j++)
@@ -31,7 +31,10 @@ int main(){
 
     if(Welcome()==true){
 
-        player user, compEnemy;
+        player user;
+        enemy  compEnemy;
+
+
 
 
 
@@ -83,3 +86,6 @@ bool Welcome(){
         return false;
     }
 }
+
+
+

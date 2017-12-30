@@ -2,6 +2,7 @@
 #define PLAYER
 
 #include <playingcard.h>
+#include <spellclass.h>
 
 using namespace std;
 
