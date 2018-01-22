@@ -10,8 +10,6 @@ using namespace std;
 
 bool gameOver;
 string userName;
-vector< vector<playingCard> > playingDeck(5);
-
 
 bool Welcome();
 void Logic();
@@ -45,6 +43,9 @@ int main(){
 
         while(!gameOver){
 
+        cout<<"ok";
+        system("clear");
+        cout<<"ok";
 
 
         }

@@ -13,6 +13,8 @@ class player{
 
 private:
 
+    vector <playingCard> cards(32);
+
     short int healtNow, armorNow;
     short int suitsEnergy[4];
 
@@ -23,6 +25,7 @@ private:
 
 public:
 
+    void setup()
 
 
 };

@@ -10,5 +10,6 @@ HEADERS += \
     playingcard.h \
     player.h \
     enemy.h \
-    spellclass.h
+    spellclass.h \
+    game.h
 
